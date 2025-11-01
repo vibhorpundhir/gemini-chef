@@ -61,29 +61,31 @@ export const RecipeForm = ({
   };
 
   return (
-    <div className="rounded-lg border border-border bg-card p-6 shadow-sm">
+    <div className="glass-card rounded-lg p-6 shadow-lg">
       <h2 className="mb-6 text-xl font-semibold text-foreground">Generate Recipe</h2>
       
       <div className="space-y-4">
         <div>
-          <Label htmlFor="ingredient">Main Ingredient</Label>
+          <Label htmlFor="ingredient" className="text-foreground">Main Ingredient</Label>
           <Input
             id="ingredient"
             placeholder="e.g., chicken, tofu, pasta"
             value={ingredient}
             onChange={(e) => setIngredient(e.target.value)}
             disabled={isLoading}
+            className="glass-card border-border/50"
           />
         </div>
 
         <div>
-          <Label htmlFor="dietary">Dietary Preference (Optional)</Label>
+          <Label htmlFor="dietary" className="text-foreground">Dietary Preference (Optional)</Label>
           <Input
             id="dietary"
             placeholder="e.g., vegan, low-carb, gluten-free"
             value={dietary}
             onChange={(e) => setDietary(e.target.value)}
             disabled={isLoading}
+            className="glass-card border-border/50"
           />
         </div>
 
@@ -111,6 +113,7 @@ export const RecipeForm = ({
             variant="outline"
             onClick={handleClear}
             disabled={isLoading}
+            className="glass-card"
           >
             <RotateCw className="mr-2 h-4 w-4" />
             Clear

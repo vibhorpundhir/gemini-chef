@@ -118,11 +118,13 @@ Format the response as a JSON object with this structure:
       throw new Error("Failed to parse recipe data");
     }
 
-    // Add ID and meal type
+    // Add ID, meal type, and image URL
+    const unsplashQuery = encodeURIComponent(recipeData.title.split(" ").slice(0, 3).join(" "));
     const recipe = {
       id: crypto.randomUUID(),
       ...recipeData,
       mealType,
+      imageUrl: `https://source.unsplash.com/800x600/?${unsplashQuery},food,dish`,
     };
 
     return new Response(
