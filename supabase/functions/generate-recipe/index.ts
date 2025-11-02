@@ -118,13 +118,21 @@ Format the response as a JSON object with this structure:
       throw new Error("Failed to parse recipe data");
     }
 
-    // Add ID, meal type, and image URL
-    const unsplashQuery = encodeURIComponent(recipeData.title.split(" ").slice(0, 3).join(" "));
+    // Use reliable static meal type images
+    const mealTypeImages: Record<string, string> = {
+      breakfast: "/images/meal-breakfast.jpg",
+      lunch: "/images/meal-lunch.jpg",
+      dinner: "/images/meal-dinner.jpg",
+      snacks: "/images/meal-snacks.jpg",
+      dessert: "/images/meal-dessert.jpg",
+      healthy: "/images/meal-healthy.jpg",
+    };
+
     const recipe = {
       id: crypto.randomUUID(),
       ...recipeData,
       mealType,
-      imageUrl: `https://source.unsplash.com/800x600/?${unsplashQuery},food,dish`,
+      imageUrl: mealTypeImages[mealType] || "/images/hero-bg.jpg",
     };
 
     return new Response(
