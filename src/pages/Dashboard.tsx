@@ -60,7 +60,7 @@ const Dashboard = () => {
                   <ChefHat className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold text-foreground">Smart Recipe Studio</h1>
+                  <h1 className="text-2xl font-bold text-foreground">SavorAI: The Smart Kitchen Studio</h1>
                   <p className="text-sm text-muted-foreground">Discover Recipes, Powered by AI</p>
                 </div>
               </div>

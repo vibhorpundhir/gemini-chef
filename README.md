@@ -1,8 +1,28 @@
-# Welcome to your Lovable project
+# SavorAI: The Smart Kitchen Studio
+
+AI-powered recipe generation dashboard that helps you discover delicious recipes tailored to your preferences.
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/09ec94b3-8b20-45ff-a4ea-3345ee85674b
+
+## Features
+
+- **AI-Powered Recipe Generation**: Generate personalized recipes using Google Generative AI (Gemini)
+- **Meal Type Categories**: Choose from Breakfast, Lunch, Dinner, Snacks, Dessert, and Healthy/Vegan options
+- **Clean Recipe Display**: View recipes in a clear, readable card format with flat/gradient backgrounds
+- **Download as PDF**: Export recipes to PDF format for offline access
+- **Personal Cookbook**: Save your favorite recipes locally
+- **Theme Toggle**: Switch between light and dark modes
+- **Responsive Design**: Works seamlessly on all devices
+
+## Recent Updates
+
+### Visual Design Changes (Latest)
+- **Clean Recipe Display**: Removed background images from recipe generation panel and recipe display cards to prevent visual corruption
+- **Minimalist Approach**: Recipe cards now use clean flat colors and subtle gradients for better readability
+- **Maintained Visual Appeal**: Dashboard, navigation, and meal type carousel still feature high-quality food imagery and glassmorphism effects
+- **Project Rename**: Updated from "Smart Recipe Studio" to "SavorAI: The Smart Kitchen Studio" throughout the application
 
 ## How can I edit this code?
 

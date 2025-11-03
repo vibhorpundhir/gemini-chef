@@ -73,50 +73,19 @@ export const RecipeCard = ({ recipe, showDelete = false, onDelete }: RecipeCardP
 
   return (
     <Card className="glass-card shadow-xl overflow-hidden">
-      {recipe.imageUrl && (
-        <div className="relative h-64 w-full overflow-hidden">
-          <img
-            src={recipe.imageUrl}
-            alt={recipe.title}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <div className="absolute bottom-4 left-4 right-4">
-            <h2 className="text-3xl font-bold text-white mb-2">{recipe.title}</h2>
-            <div className="flex gap-4 text-white/90 text-sm">
-              <div className="flex items-center gap-1">
-                <Clock className="h-4 w-4" />
-                <span>{recipe.cookingTime}</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Users className="h-4 w-4" />
-                <span>{recipe.servings} servings</span>
-              </div>
-            </div>
+      <CardHeader>
+        <CardTitle className="text-2xl">{recipe.title}</CardTitle>
+        <CardDescription className="text-base">{recipe.description}</CardDescription>
+        <div className="flex gap-4 text-sm text-muted-foreground pt-2">
+          <div className="flex items-center gap-1">
+            <Clock className="h-4 w-4" />
+            <span>{recipe.cookingTime}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Users className="h-4 w-4" />
+            <span>{recipe.servings} servings</span>
           </div>
         </div>
-      )}
-
-      <CardHeader>
-        {!recipe.imageUrl && (
-          <>
-            <CardTitle className="text-2xl">{recipe.title}</CardTitle>
-            <CardDescription className="text-base">{recipe.description}</CardDescription>
-            <div className="flex gap-4 text-sm text-muted-foreground pt-2">
-              <div className="flex items-center gap-1">
-                <Clock className="h-4 w-4" />
-                <span>{recipe.cookingTime}</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Users className="h-4 w-4" />
-                <span>{recipe.servings} servings</span>
-              </div>
-            </div>
-          </>
-        )}
-        {recipe.imageUrl && (
-          <CardDescription className="text-base">{recipe.description}</CardDescription>
-        )}
       </CardHeader>
 
       <CardContent className="space-y-6">

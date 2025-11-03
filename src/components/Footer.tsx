@@ -7,10 +7,10 @@ export const Footer = () => {
         <div className="flex flex-col items-center justify-center gap-2 text-center">
           <div className="flex items-center gap-2">
             <ChefHat className="h-5 w-5 text-primary" />
-            <span className="font-semibold text-foreground">Smart Recipe Studio</span>
+            <span className="font-semibold text-foreground">SavorAI: The Smart Kitchen Studio</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Smart Recipe Studio. Powered by AI. All rights reserved.
+            © {new Date().getFullYear()} SavorAI: The Smart Kitchen Studio. Powered by AI. All rights reserved.
           </p>
         </div>
       </div>
